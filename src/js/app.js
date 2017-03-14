@@ -1,15 +1,18 @@
 var users = [{
     name: "Вася",
     surname: 'Иванов',
-    age: 20
+    age: 20,
+    height: 176
 }, {
     name: "Петя",
     surname: 'Чапаев',
-    age: 25
+    age: 25,
+    height: 186
 }, {
     name: "Маша",
     surname: 'Медведева',
-    age: 18
+    age: 18,
+    height: 205
 }];
 
 function byField(field) {
@@ -19,7 +22,7 @@ function byField(field) {
 }
 
 var appList = document.getElementById('app-list');
-users.sort(byField('age'));
+users.sort(byField('height'));
 users.forEach(function(user) {
     appList.innerHTML += "<h2>" + user.name + " - " + user.age + "</h2>";
 });
